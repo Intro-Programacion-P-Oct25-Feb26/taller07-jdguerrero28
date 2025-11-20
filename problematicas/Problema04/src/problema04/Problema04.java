@@ -14,6 +14,7 @@ public class Problema04 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        double resultadoFinal;
         double contador = 0;
         double resultado = 0;
         int numerador = 1;
@@ -28,14 +29,17 @@ public class Problema04 {
                 signo = "+";
             }
             resultado = (contador + 1);
-            mensaje = String.format("%s%s%d/%.0f ", mensaje,signo,
-                    numerador, resultado);            
+            mensaje = String.format("%s%s%d/%.0f ", mensaje, signo,
+                    numerador, resultado);
             contador = contador + 2;
             contadorSigno = contadorSigno + 1;
-
-
+            
         }
-        System.out.printf("%s", mensaje); // TODO code application logic here
+        resultadoFinal = (1.0-(1.0/3.0)+(1.0/5.0)-(1.0/7.0)+(1.0/9.0)-
+                (1.0/11.0)+(1.0/13.0)-(1.0/15.0));
+        System.out.printf("%s\nEl resultado es:\n%.4f\n", mensaje,
+                resultadoFinal);
+// TODO code application logic here
     }
 
 }
